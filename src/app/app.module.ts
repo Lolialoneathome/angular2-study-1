@@ -21,6 +21,10 @@ import { CommentCollectionComponent } from './index/Comments/comments-collection
 import { TradeInComponent } from './AppServices/TradeIn/trade-in.component';
 import { ValuationComponent } from './AppServices/Valuation/valuation.component';
 
+import { AboutUsComponent } from './About/Info/about-us.component';
+import { ContactsComponent } from './About/Contacts/contacts.component';
+import { EmployesComponent } from './About/Employees/employes.component';
+
 import { TicketFormComponent } from './Ticket/ticket-form.component';
 
 import { routing } from './app.routes';
@@ -44,7 +48,10 @@ import { AppComponent } from './app.component';
     ComissionSellComponent,
     TicketFormComponent,
     TradeInComponent,
-    ValuationComponent
+    ValuationComponent,
+    AboutUsComponent,
+    ContactsComponent,
+    EmployesComponent
   ],
   imports: [
     BrowserModule,

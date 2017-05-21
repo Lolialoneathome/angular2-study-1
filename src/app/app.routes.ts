@@ -13,6 +13,9 @@ import { FastSellComponent } from './sell/FastSell/fast-sell.component';
 import { ComissionSellComponent } from './sell/ComissionSell/comission-sell.component';
 import { TradeInComponent } from './AppServices/TradeIn/trade-in.component';
 import { ValuationComponent } from './AppServices/Valuation/valuation.component';
+import { AboutUsComponent } from './About/Info/about-us.component';
+import { ContactsComponent } from './About/Contacts/contacts.component';
+import { EmployesComponent } from './About/Employees/employes.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -23,7 +26,10 @@ export const routes: Routes = [
   { path: 'sell_com', component: ComissionSellComponent },
   { path: 'tradein', component: TradeInComponent },
   { path: 'valuation', component: ValuationComponent },
-  { path: 'index', component: IndexComponent },
+  { path: 'aboutus', component: AboutUsComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'employes', component: EmployesComponent },
 ];
 
 // Deprecated provide

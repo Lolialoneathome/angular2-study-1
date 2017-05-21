@@ -23,7 +23,7 @@
   <nav class="navbar">
     <div class="navbar navbar-default">
       <div class="container">
-        <ul class="nav navbar-nav nav-text" (mouseenter) ="mouseEnterDetailedNav('div a') "  (mouseleave) ="mouseLeaveDetailedNav('div A')">
+        <ul class="row nav navbar-nav nav-text" (mouseenter) ="mouseEnterDetailedNav('div a') "  (mouseleave) ="mouseLeaveDetailedNav('div A')">
           <li>
             <a (mouseenter) ="mouseEnter('div a') " (mouseleave) ="mouseLeave('div A')">Купить автомобиль</a>
             <div *ngIf="isNavDetailsShow || isNavDetailsHowered">
@@ -51,7 +51,17 @@
             <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/valuation']"> Оценка стоимости </a> </li>
             </ul>
           </div>
-        <li><a href="#">О компании</a></li>
+        </li>
+        <li>
+          <a (mouseenter) ="mouseEnter('div a') " (mouseleave) ="mouseLeave('div A')">О компании</a>
+          <div *ngIf="isNavDetailsShow || isNavDetailsHowered" >
+            <ul class="btn-group-vertical nav navbar-nav nav-text" role="group" aria-label="...">
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/contacts']"> Контакты </a> </li>
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/employes']"> Наши сотрудники </a> </li>
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/aboutus']"> О нас </a> </li>
+            </ul>
+          </div>
+        </li>
         </ul>
       </div>
     </div>
