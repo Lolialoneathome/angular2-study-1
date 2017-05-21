@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row">
+    <nav class="navbar">
+      <div class="navbar-header">
+        <a class="navbar-brand no-padding" [routerLink]="['/index']">
+          <span><img  class="logo-img" src="assets/images/logo.png"/></span>
+          <span class="header2 header-text "> комфортный салон автомобилей с пробегом </span>
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right border-right border-left">
+        <li class="border-right">
+          <div class="search-but">
+            <img src="assets/images/search.png" alt="search icon"/>
+          </div>
+      </li>
+        <li><p class="navbar-text">8 (342) <span class="red-bold-text">244-44-22</span> </p></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+  <nav class="navbar">
+    <div class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav nav-text">
+          <li>
+            <a (mouseenter) ="mouseEnter('div a') " (mouseleave) ="mouseLeave('div A')">Купить автомобиль</a>
+            <div *ngIf="isNavDetailsShow || isNavDetailsHowered" (mouseenter) ="mouseEnterDetailedNav('div a') "  (mouseleave) ="mouseLeaveDetailedNav('div A')">
+              <ul class="btn-group-vertical nav navbar-nav nav-text" role="group" aria-label="...">
+              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy']"> Специальное предложения </a> </li>
+              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy']"> Автомобили в наличии </a> </li>
+              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy']"> Автомобили на заказ  </a> </li>
+              </ul>
+            </div>
+          </li>
+        <li><a href="#">Продать автомобиль</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">О компании</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slide-wrapper">
+
+     <div id="homepage-feature" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+           <li data-target="#homepage-feature" data-slide-to="0" class="active"></li>
+           <li data-target="#homepage-feature" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+           <div class="item active" style="background-image:url(assets/images/slide_picture1.png)">
+           </div>
+
+           <div class="item" style="background-image:url(assets/images/car1.png)">
+           </div>
+
+        </div>
+        <!-- /.carousel-inner -->
+        <!-- Controls -->
+        <a class="left carousel-control" href="#homepage-feature" data-slide="prev">
+          <span class="fa fa-angle-left"></span>
+        </a>
+        <a class="right carousel-control" href="#homepage-feature" data-slide="next">
+          <span class="fa fa-angle-right"></span>
+        </a>
+     </div>
+     <!-- /#homepage-feature.carousel -->
+     <div class="red">
+       <div class="red-content">
+         <div class="header1">TOYOTA CAMRY</div>
+         <div style="padding-top:25px; padding-bottom:25px">Весенние скидки до 100 000 рублей</div>
+         <div class="jum-button">
+           <p><a class="btn btn-custom-red btn-primary btn-primary-custom-red btn-lg" href="#" role="button">Подробнее</a></p>
+         </div>
+       </div>
+     </div>
+
+  </div>
+  <!-- /.container.slide-wrapper -->
+
+			<footer class="dark-gray-back">
+				футер
+	 </footer>
+     <script type='text/javascript'>
+         $(document).ready(function() {
+              $('#homepage-feature').carousel({
+                  interval: 2000
+              })
+         });
+     </script>
+   <!-- Router Outlet -->
+    <router-outlet></router-outlet>
