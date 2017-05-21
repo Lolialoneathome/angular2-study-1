@@ -6,11 +6,23 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
-import { SpecialComponent } from './buy/special.component';
+import { SpecialComponent } from './buy/Special/special.component';
+import { OrderComponent } from './buy/Order/order.component';
+import { StockComponent } from './buy/Stock/stock.component';
+import { FastSellComponent } from './sell/FastSell/fast-sell.component';
+import { ComissionSellComponent } from './sell/ComissionSell/comission-sell.component';
+import { TradeInComponent } from './AppServices/TradeIn/trade-in.component';
+import { ValuationComponent } from './AppServices/Valuation/valuation.component';
 
 // Route Configuration
 export const routes: Routes = [
-  { path: 'buy', component: SpecialComponent },
+  { path: 'buy_special', component: SpecialComponent },
+  { path: 'buy_order', component: OrderComponent },
+  { path: 'buy_stock', component: StockComponent },
+  { path: 'sell_fast', component: FastSellComponent },
+  { path: 'sell_com', component: ComissionSellComponent },
+  { path: 'tradein', component: TradeInComponent },
+  { path: 'valuation', component: ValuationComponent },
   { path: 'index', component: IndexComponent },
 ];
 

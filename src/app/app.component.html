@@ -23,19 +23,34 @@
   <nav class="navbar">
     <div class="navbar navbar-default">
       <div class="container">
-        <ul class="nav navbar-nav nav-text">
+        <ul class="nav navbar-nav nav-text" (mouseenter) ="mouseEnterDetailedNav('div a') "  (mouseleave) ="mouseLeaveDetailedNav('div A')">
           <li>
             <a (mouseenter) ="mouseEnter('div a') " (mouseleave) ="mouseLeave('div A')">Купить автомобиль</a>
-            <div *ngIf="isNavDetailsShow || isNavDetailsHowered" (mouseenter) ="mouseEnterDetailedNav('div a') "  (mouseleave) ="mouseLeaveDetailedNav('div A')">
+            <div *ngIf="isNavDetailsShow || isNavDetailsHowered">
               <ul class="btn-group-vertical nav navbar-nav nav-text" role="group" aria-label="...">
-              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy']"> Специальное предложения </a> </li>
-              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy']"> Автомобили в наличии </a> </li>
-              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy']"> Автомобили на заказ  </a> </li>
+              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy_special']"> Специальное предложения </a> </li>
+              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy_stock']"> Автомобили в наличии </a> </li>
+              <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/buy_order']"> Автомобили на заказ  </a> </li>
               </ul>
             </div>
           </li>
-        <li><a href="#">Продать автомобиль</a></li>
-        <li><a href="#">Услуги</a></li>
+        <li>
+          <a (mouseenter) ="mouseEnter('div a') " (mouseleave) ="mouseLeave('div A')">Продать автомобиль</a>
+          <div *ngIf="isNavDetailsShow || isNavDetailsHowered" >
+            <ul class="btn-group-vertical nav navbar-nav nav-text" role="group" aria-label="...">
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/sell_fast']"> Быстрая продажа </a> </li>
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/sell_com']"> Комиссионная продажа </a> </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a (mouseenter) ="mouseEnter('div a') " (mouseleave) ="mouseLeave('div A')">Услуги</a>
+          <div *ngIf="isNavDetailsShow || isNavDetailsHowered" >
+            <ul class="btn-group-vertical nav navbar-nav nav-text" role="group" aria-label="...">
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/tradein']"> Trade-In </a> </li>
+            <li class="btn-group btn-group-xs" role="group"> <a style="padding-top: 0px" [routerLink]="['/valuation']"> Оценка стоимости </a> </li>
+            </ul>
+          </div>
         <li><a href="#">О компании</a></li>
         </ul>
       </div>
@@ -75,17 +90,13 @@
          <div class="header1">TOYOTA CAMRY</div>
          <div style="padding-top:25px; padding-bottom:25px">Весенние скидки до 100 000 рублей</div>
          <div class="jum-button">
-           <p><a class="btn btn-custom-red btn-primary btn-primary-custom-red btn-lg" href="#" role="button">Подробнее</a></p>
+           <p><a class="btn btn-primary btn-custom-red  btn-primary-custom-red btn-lg" href="#" role="button">Подробнее</a></p>
          </div>
        </div>
      </div>
 
   </div>
   <!-- /.container.slide-wrapper -->
-
-			<footer class="dark-gray-back">
-				футер
-	 </footer>
      <script type='text/javascript'>
          $(document).ready(function() {
               $('#homepage-feature').carousel({
@@ -95,3 +106,38 @@
      </script>
    <!-- Router Outlet -->
     <router-outlet></router-outlet>
+
+
+			<footer class="dark-gray-back">
+        <div class="container" style="padding-top: 25px">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <form class="form-horizontal footer-content">
+              <div class="col-sm-11 text-center" style="padding-bottom:15px"> <p>Подписка на специальные предложения
+              и новые поступления: </p>
+              </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-1 col-sm-9">
+                    <input type="email" class="form-control" id="email" placeholder="Имя">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-1 col-sm-9">
+                  <input type="password" class="form-control" id="pwd" placeholder="E-mail">
+                  </div>
+                </div>
+              <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-12">
+                <button type="submit" class="btn btn-default btn-custom-red  btn-primary-custom-red">Подписаться</button>
+                </div>
+              </div>
+              <div class="form-group col-sm-12 text-center"> г. Пермь, шоссе Космонавтов, 47а</div>
+            </form>
+
+
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+    	 </footer>

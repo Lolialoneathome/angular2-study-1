@@ -1,5 +1,12 @@
-.gray-back {
-	background-color: rgb(242, 242, 242);
+.item {
+	padding: 10px;
+	height: 250px
+}
+
+.centered-icons {
+	display: flex;
+	justify-content: center;
+	padding: 15px;
 }
 
 .red-back {

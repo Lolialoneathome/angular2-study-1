@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./app.component.less'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   private isNavDetailsShow: boolean = false;
   private isNavDetailsHowered = false;
@@ -33,4 +35,9 @@ export class AppComponent {
        this.isNavDetailsHowered = false;
      }
 
+     constructor(public router: Router) {}
+
+     ngOnInit(): void {
+       this.router.navigateByUrl('/sell_fast');
+     }
 }
